@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RegistrationAppp</string>
+
+    <array name="countries">
+        <item>Jordan</item>
+        <item>Palestine</item>
+        <item>Iraq</item>
+        <item>Saudi Arabia</item>
+        <item>Lebanon</item>
+    </array>
+</resources>
