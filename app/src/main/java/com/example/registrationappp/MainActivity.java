@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         initViews();
 
         System.out.println("First Change");
-        Today is a good day!
+        System.out.println("Problem Solved!");
         btnPickImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
