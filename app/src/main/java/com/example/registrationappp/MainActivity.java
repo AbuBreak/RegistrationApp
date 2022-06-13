@@ -40,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("First Change");
         System.out.println("Do whatever you want :)");
 
+        String s = " Malik";
+        String s1 = "";
+
         btnPickImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             txtWarnRepPass.setText("Please Re-enter Password:");
             return false;
         }
-        if(!txtPassword.getText().toString().equals(txtRepPassword.getText().toString())){
+        if (!txtPassword.getText().toString().equals(txtRepPassword.getText().toString())) {
             txtWarnRepPass.setVisibility(View.VISIBLE);
             txtWarnRepPass.setText("Password dose not match");
             return false;
@@ -128,30 +131,30 @@ public class MainActivity extends AppCompatActivity {
     private void showSnackBar() {
         Log.d(TAG, "showSnackBar: Started");
 
-        String Name=txtName.getText().toString();
-        String Email=txtEmail.getText().toString();
-        String Country=countrySpinner.getSelectedItem().toString();
-        String gender="";
+        String Name = txtName.getText().toString();
+        String Email = txtEmail.getText().toString();
+        String Country = countrySpinner.getSelectedItem().toString();
+        String gender = "";
 
-        switch (rgGender.getCheckedRadioButtonId()){
+        switch (rgGender.getCheckedRadioButtonId()) {
             case R.id.rbMale:
-                gender="Male";
+                gender = "Male";
                 break;
             case R.id.rbFemale:
-                gender="Female";
+                gender = "Female";
                 break;
             case R.id.rbOthers:
-                gender="Other";
+                gender = "Other";
                 break;
             default:
-                gender="Unknown";
+                gender = "Unknown";
                 break;
         }
 
-        String snackText = "Name: "+ Name +"\n"+
-                "Email: "+Email+"\n"+
-                "Country: "+Country+"\n"+
-                "Gender: "+gender;
+        String snackText = "Name: " + Name + "\n" +
+                "Email: " + Email + "\n" +
+                "Country: " + Country + "\n" +
+                "Gender: " + gender;
 
         Snackbar.make(parent, snackText, Snackbar.LENGTH_INDEFINITE)
                 .setAction("Dismiss", new View.OnClickListener() {
